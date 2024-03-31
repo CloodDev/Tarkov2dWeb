@@ -7,6 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escape from Tarkov 2D</title>
     <style>
+        /* Styles for Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .modal-content {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 25px rgba(0, 255, 85, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .modal-content a {
+            color: #a2ff00;
+            text-decoration: underline;
+        }
+
+        /* End of Modal Styles */
+
         body {
             background-image: url('dsas.png');
             background-size: cover;
@@ -58,11 +98,10 @@
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(10px);
             box-shadow: 0 10px 25px rgba(0, 255, 85, 0.3);
-            transform: scale(1.00) rotate(1deg);
         }
 
         .frame:hover {
-            transform: scale(1.00) rotate(0deg);
+            transform: scale(1.00);
             box-shadow: 0 12px 30px rgba(60, 199, 241, 0.178);
         }
 
@@ -106,7 +145,7 @@
             .frame {
                 padding: 180px;
                 border-radius: 10px;
-                transform: scale(1.00) rotate(0deg);
+                transform: scale(1.00);
             }
 
             h1 {
@@ -134,7 +173,7 @@
         <h1>Start of Closed Beta Testing</h1>
         <p>Congratulations! You have been selected to participate in the Closed Beta testing of <strong>Escape from
                 Tarkov 2D</strong>.</p>
-        <a href="https://github.com/HAJTIDev/TARKOV-2D-v.0.1" class="download-button">Download Game</a>
+        <a href="#" class="download-button" id="downloadBtn">Download Game</a>
         <p>Some final words from our Developers:</p>
         <p id="playAudio">“Ne strelyay” - Sanitar ❤️</p>
         <p>“Strilyay!” - Squash</p>
@@ -149,8 +188,43 @@
     <audio id="audioPlayer" src="audiofile.mp3"></audio>
     <audio id="audioPlayerGlukhar" src="alarm.mp3"></audio>
 
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>This is a popup message for the download button.</p>
+            <p>Click <a href="https://github.com/HAJTIDev/TARKOV-2D-v.0.1" target="_blank">here</a> to download the game.</p>
+        </div>
+    </div>
 
     <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("downloadBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Audio functionality
         document.getElementById('playAudio').addEventListener('click', function () {
             var audio = document.getElementById('audioPlayer');
             if (audio.paused) {
@@ -171,3 +245,5 @@
         });
     </script>
 </body>
+
+</html>

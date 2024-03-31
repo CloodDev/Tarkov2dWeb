@@ -4,50 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escape from Tarkov: Arena Beta</title>
+    <title>Escape from Tarkov 2D</title>
     <style>
         body {
             background-image: url('dsas.png');
             background-size: cover;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             padding: 20px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .frame {
-            border: 2px solid #ffffff;
+            border: 2px solid #f0f0f0;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 12px;
             max-width: 600px;
             margin: 0 auto;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            background: linear-gradient(to bottom, rgba(26, 26, 26, 0.8) 0%, rgba(26, 26, 26, 0) 100%);
-            background: linear-gradient(to top, rgba(26, 26, 26, 0.8) 0%, rgba(26, 26, 26, 0) 100%);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
         }
 
         h1 {
-            font-size: 28px;
-            margin-bottom: 20px;
+            font-size: 32px;
+            color: #a2ff00;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px #000000;
         }
 
         p {
-            font-size: 18px;
+            font-size: 16px;
+            line-height: 1.5;
             margin-bottom: 20px;
+            color: #d0d0d0;
+            text-shadow: 1px 1px 2px #000000;
         }
 
         .download-button {
-            background-color: #e0e0e0;
-            color: #1a1a1a;
+            background-color: #4caf50;
+            color: #fff;
             padding: 12px 24px;
+            border: none;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+            cursor: pointer;
         }
 
         .download-button:hover {
-            background-color: #d0d0d0;
+            background-color: #43a047;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 640px) {
+            .frame {
+                padding: 15px;
+                border-radius: 8px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -55,19 +85,18 @@
 <body>
     <div class="frame">
         <h1>Start of Closed Beta Testing</h1>
-        <p>Congratulations! You have been selected to participate in the Closed Beta testing of <strong>Escape from
-                Tarkov 2D</strong>.</p>
+        <p>Congratulations! You have been selected to participate in the Closed Beta testing of <strong>Escape from Tarkov 2D</strong>.</p>
         <p>Follow the instructions below to confirm your participation:</p>
         <a href="https://youtube.com" class="download-button">Download Launcher</a>
-        <p>Some final words from our Developers</p>
-        <p>“Strilyay!”-Squash</p>
-        <p>“Tam kto-to dvizhetsya!”-Anesteziolog</p>
-        <p>“Podozhdi syuda!”-Okulist</p>
-        <p>“Ne strelyay”-Sanitar<3< /p>
-                <p>Vam nuzhno ostavit’ eto za soboy-Sektan</p>
-                <p>"Davay, davay-davay!"-Zhret</p>
-                <p>“Zashchishchayte menya!”-Igor Bubelbush </p>
-                <p>“Czekaj bo musze dziecko uderzyc”-Jagger</p>
+        <p>Some final words from our Developers:</p>
+        <p>“Strilyay!” - Squash</p>
+        <p>“Tam kto-to dvizhetsya!” - Anesteziolog</p>
+        <p>“Podozhdi syuda!” - Okulist</p>
+        <p>“Ne strelyay” - Sanitar <3</p>
+        <p>Vam nuzhno ostavit’ eto za soboy - Sektan</p>
+        <p>"Davay, davay-davay!" - Zhret</p>
+        <p>“Zashchishchayte menya!” - Igor Bubelbush</p>
+        <p>“Czekaj, bo musze dziecko uderzyc” - Jagger</p>
     </div>
 </body>
 

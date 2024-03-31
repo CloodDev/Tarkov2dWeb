@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="icon" type="image/png" href="boykissser.png">
     <meta charset="UTF-8">
@@ -30,11 +31,14 @@
             backdrop-filter: blur(10px);
             box-shadow: 0 10px 25px rgba(0, 255, 85, 0.3);
             transition: all 0.3s ease-in-out;
+            transform: scale(1.00) rotate(1deg);
         }
 
         .frame:hover {
-            transform: scale(1.00) rotate(1deg); /* Slightly scale and rotate the frame */
-            box-shadow: 0 12px 30px rgba(60, 199, 241, 0.178); /* Enhance the shadow for more depth */
+            transform: scale(1.00) rotate(0deg);
+            /* Slightly scale and rotate the frame */
+            box-shadow: 0 12px 30px rgba(60, 199, 241, 0.178);
+            /* Enhance the shadow for more depth */
         }
 
         h1 {
@@ -66,7 +70,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .download-button:hover, .download-button:focus {
+        .download-button:hover,
+        .download-button:focus {
             background: linear-gradient(145deg, #087f23, #4caf50);
             transform: translateY(-1px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -88,10 +93,12 @@
         }
     </style>
 </head>
+
 <body>
     <div class="frame">
         <h1>Start of Closed Beta Testing</h1>
-        <p>Congratulations! You have been selected to participate in the Closed Beta testing of <strong>Escape from Tarkov 2D</strong>.</p>
+        <p>Congratulations! You have been selected to participate in the Closed Beta testing of <strong>Escape from
+                Tarkov 2D</strong>.</p>
         <p>Follow the instructions below to confirm your participation:</p>
         <a href="https://github.com/HAJTIDev/TARKOV-2D-v.0.1" class="download-button">Download Game</a>
         <p>Some final words from our Developers:</p>
@@ -105,4 +112,5 @@
         <p>“Czekaj, bo musze dziecko uderzyc” - Jagger</p>
     </div>
 </body>
+
 </html>

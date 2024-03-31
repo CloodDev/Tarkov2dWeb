@@ -36,9 +36,7 @@
 
         .frame:hover {
             transform: scale(1.00) rotate(0deg);
-            /* Slightly scale and rotate the frame */
             box-shadow: 0 12px 30px rgba(60, 199, 241, 0.178);
-            /* Enhance the shadow for more depth */
         }
 
         h1 {
@@ -102,16 +100,30 @@
         <p>Follow the instructions below to confirm your participation:</p>
         <a href="https://github.com/HAJTIDev/TARKOV-2D-v.0.1" class="download-button">Download Game</a>
         <p>Some final words from our Developers:</p>
+        <p id="playAudio">“Ne strelyay” - Sanitar ❤️</p>
         <p>“Strilyay!” - Squash</p>
         <p>“Tam kto-to dvizhetsya!” - Anesteziolog</p>
         <p>“Podozhdi syuda!” - Okulist</p>
-        <p>“Ne strelyay” - Sanitar ❤️</p>
         <p>Vam nuzhno ostavit’ eto za soboy - Sektan</p>
         <p>"Davay, davay-davay!" - Zhret</p>
         <p>“Zashchishchayte menya!” - Igor Bubelbush</p>
         <p>“Czekaj, bo musze dziecko uderzyc” - Jagger</p>
-        <!--Napierdalaja mnie tu  -->
+        <!-- Additional content -->
     </div>
+    <!-- Audio element for playing sound -->
+    <audio id="audioPlayer" src="audiofile.mp3"></audio>
+
+    <script>
+        document.getElementById('playAudio').addEventListener('click', function() {
+            var audio = document.getElementById('audioPlayer');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.currentTime = 0; // Optionally, restart the audio if it's already playing
+                audio.play();
+            }
+        });
+    </script>
 </body>
 
 </html>

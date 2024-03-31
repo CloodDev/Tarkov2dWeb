@@ -8,6 +8,7 @@
     <title>Escape from Tarkov 2D</title>
     <style>
         body {
+            transition: all 0.3s ease-in-out;
             background-image: url('dsas.png');
             background-size: cover;
             color: #f0f0f0;
@@ -24,13 +25,16 @@
         }
 
         .navbar {
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent black background */
             width: 100%;
             position: fixed;
             top: 0;
             z-index: 999;
-            transition: background-color 0.5s; /* Smooth transition effect */
-            backdrop-filter: blur(10px); /* Apply backdrop filter for blur effect */
+            transition: background-color 0.5s;
+            /* Smooth transition effect */
+            backdrop-filter: blur(10px);
+            /* Apply backdrop filter for blur effect */
         }
 
         .navbar a {
@@ -39,15 +43,18 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
-            transition: color 0.3s; /* Smooth transition for text color */
+            transition: color 0.3s;
+            /* Smooth transition for text color */
         }
 
         .navbar a:hover {
-            color: #4CAF50; /* Change text color on hover */
+            color: #4CAF50;
+            /* Change text color on hover */
         }
 
         .navbar a.active {
-            color: #4CAF50; /* Color for active link */
+            color: #4CAF50;
+            /* Color for active link */
         }
 
         .frame {
@@ -59,7 +66,6 @@
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(10px);
             box-shadow: 0 10px 25px rgba(0, 255, 85, 0.3);
-            transition: all 0.3s ease-in-out;
             transform: scale(1.00) rotate(1deg);
         }
 
@@ -149,7 +155,7 @@
 
 
     <script>
-        document.getElementById('playAudio').addEventListener('click', function() {
+        document.getElementById('playAudio').addEventListener('click', function () {
             var audio = document.getElementById('audioPlayer');
             if (audio.paused) {
                 audio.play();
@@ -158,15 +164,15 @@
                 audio.play();
             }
         });
-        document.getElementById('playAudioGlukhar').addEventListener('click', function() {
-        var audio = document.getElementById('audioPlayerGlukhar');
-        if (audio.paused) {
-            audio.play();
-        } else {
-            audio.currentTime = 0;
-            audio.play();
-        }
-    });
+        document.getElementById('playAudioGlukhar').addEventListener('click', function () {
+            var audio = document.getElementById('audioPlayerGlukhar');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.currentTime = 0;
+                audio.play();
+            }
+        });
     </script>
 </body>
 

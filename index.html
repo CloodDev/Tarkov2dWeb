@@ -108,10 +108,11 @@
         <p>"Davay, davay-davay!" - Zhret</p>
         <p>“Zashchishchayte menya!” - Igor Bubelbush</p>
         <p>“Czekaj, bo musze dziecko uderzyc” - Jagger</p>
-        <!-- Additional content -->
+        <p id="playAudioGlukhar">“Reserve Alarm” - Glukhar</p>
     </div>
-    <!-- Audio element for playing sound -->
     <audio id="audioPlayer" src="audiofile.mp3"></audio>
+    <audio id="audioPlayerGlukhar" src="alarm.mp3"></audio>
+
 
     <script>
         document.getElementById('playAudio').addEventListener('click', function() {
@@ -123,6 +124,15 @@
                 audio.play();
             }
         });
+        document.getElementById('playAudioGlukhar').addEventListener('click', function() {
+        var audio = document.getElementById('audioPlayerGlukhar');
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.currentTime = 0;
+            audio.play();
+        }
+    });
     </script>
 </body>
 

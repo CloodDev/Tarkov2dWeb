@@ -17,12 +17,41 @@
             margin: 0;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             overflow: hidden;
         }
 
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 999;
+            transition: background-color 0.5s; /* Smooth transition effect */
+            backdrop-filter: blur(10px); /* Apply backdrop filter for blur effect */
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: color 0.3s; /* Smooth transition for text color */
+        }
+
+        .navbar a:hover {
+            color: #4CAF50; /* Change text color on hover */
+        }
+
+        .navbar a.active {
+            color: #4CAF50; /* Color for active link */
+        }
+
         .frame {
+            margin-top: 60px;
             border: 3px solid #f0f0f0;
             padding: 20px;
             border-radius: 15px;
@@ -93,6 +122,11 @@
 </head>
 
 <body>
+    <div class="navbar">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="contact.html">Contact</a>
+    </div>
     <div class="frame">
         <h1>Start of Closed Beta Testing</h1>
         <p>Congratulations! You have been selected to participate in the Closed Beta testing of <strong>Escape from

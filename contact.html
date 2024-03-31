@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="boykissser.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Escape from Tarkov 2D</title>
+    <style>
+        body {
+            background-image: url('dsas.png');
+            background-size: cover;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5); 
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 999;
+            transition: background-color 0.5s; 
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #4CAF50;
+        }
+
+        .navbar a.active {
+            color: #4CAF50;
+        }
+
+        .content {
+            margin-top: 60px;
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 25px rgba(0, 255, 85, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #a2ff00;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 6px #000;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(145deg, #4caf50, #087f23);
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(145deg, #087f23, #4caf50);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .discord-accounts {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .discord-accounts h2 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .discord-account {
+            margin-bottom: 10px;
+        }
+
+        .discord-account strong {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a class="active" href="contact.html">Contact</a>
+    </div>
+    <div class="content">
+        <div class="discord-accounts">
+            <h1>Contact us :3</h1>
+            <h2>Developers</h2>
+            <div class="discord-account">
+                <strong>Game developer</strong> _snape
+            </div>
+            <div class="discord-account">
+                <strong>Game developer</strong> clood._.
+            </div>
+            <div class="discord-account">
+                <strong>Web Developer</strong> psychohmm
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

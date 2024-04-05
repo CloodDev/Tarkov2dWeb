@@ -102,7 +102,7 @@
 
         .frame:hover {
             transform: scale(1.00);
-            box-shadow: 0 12px 30px rgba(60, 199, 241, 0.178);
+            box-shadow: 0 12px 30px rgb(34, 3, 232);
         }
 
         h1 {
@@ -182,17 +182,17 @@
         <p>Vam nuzhno ostavit’ eto za soboy - Sektan</p>
         <p>"Davay, davay-davay!" - Zhret</p>
         <p>“Zashchishchayte menya!” - Igor Bubelbush</p>
-        <p>“Czekaj, bo musze dziecko uderzyć” - Jagger</p>
+        <p id="playAudioodpadla">“Czekaj, bo musze dziecko uderzyć” - Jagger</p>
         <p id="playAudioGlukhar">“Reserve alarm” - Glukhar</p>
     </div>
     <audio id="audioPlayer" src="audiofile.mp3"></audio>
     <audio id="audioPlayerGlukhar" src="alarm.mp3"></audio>
-
+    <audio id="audioplay" src="audio2.mp3"></audio>
     <!-- Modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p>This is a popup message for the download button.</p>
+            <p>Here you can download our game :3</p>
             <p>Click <a href="https://github.com/HAJTIDev/TARKOV-2D-v.0.1" target="_blank">here</a> to download the game.</p>
         </div>
     </div>
@@ -243,6 +243,16 @@
                 audio.play();
             }
         });
+    document.getElementById('playAudioodpadla').addEventListener('click',function(){
+        var audio=document.getElementById('audioplay');
+        if (audio.paused){
+            audio.play();
+        }
+        else {
+            audio.currentTime=0;
+            audio.play();
+        }
+    });
     </script>
 </body>
 
